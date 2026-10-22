@@ -14,8 +14,9 @@ build step is required.
 
 The intended GitHub Pages address is https://louvansky.github.io/portfolio/.
 Publication has not yet been verified. Projects include a disconnect relocation
-and electrical panel work with a dedicated AC circuit, each with two photos. One more
-project and a separate Contact page remain to be added. The Connect navigation
+electrical panel work with a dedicated AC circuit, and an outdoor lighting switch
+installation. All three projects include photos. A separate Contact page remains
+to be added. The Connect navigation
 link currently points to the contact section on Home.
 
 ## Assets
