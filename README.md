@@ -1,7 +1,8 @@
 # Louvansky Benjamin's portfolio
 
-A personal portfolio built with plain HTML, CSS, and JavaScript. The Home page
-introduces my studies at NJIT and my work at American Electrical Technologies INC.
+A personal portfolio built with plain HTML, CSS, and JavaScript. The Home, About Me, and Skills pages
+introduce my studies at NJIT, my work at American Electrical Technologies INC,
+my practical skills, and my interests.
 It includes responsive navigation, a dark mode toggle, and my LinkedIn profile.
 
 ## View locally
@@ -12,8 +13,8 @@ build step is required.
 ## Deployment
 
 The intended GitHub Pages address is https://louvansky.github.io/portfolio/.
-Publication has not yet been verified. The remaining four pages will be added in
-later tasks; Home currently links to its education, experience, and contact sections.
+Publication has not yet been verified. Projects and Contact pages will be added in later tasks. The Connect navigation
+link currently points to the contact section on Home.
 
 ## Assets
 
