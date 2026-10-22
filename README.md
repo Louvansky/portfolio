@@ -12,8 +12,10 @@ build step is required.
 
 ## Deployment
 
-The intended GitHub Pages address is https://louvansky.github.io/portfolio/.
-Publication has not yet been verified. Projects include a disconnect relocation,
+Live website: [louvansky.github.io/portfolio](https://louvansky.github.io/portfolio/).
+
+Verified on October 22, 2026: all five pages, the shared CSS and JavaScript,
+and all seven photos returned HTTP 200 and exactly matched repository files. Projects include a disconnect relocation,
 electrical panel work with a dedicated AC circuit, and an outdoor lighting switch
 installation. All three projects include photos. Every page links to all five
 pages. Contact is available through LinkedIn.

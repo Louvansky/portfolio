@@ -50,3 +50,25 @@ No contact form is included, so form input validation cases are not applicable.
 | --- | --- | --- | --- | --- | --- | --- |
 
 No live-browser executions recorded yet.
+
+## Deployment verification — October 22, 2026
+
+Target: https://louvansky.github.io/portfolio/
+
+Method: Python HTTP requests and byte-for-byte comparison against repository
+files. Browser/version and viewport: not applicable (HTTP checks only).
+
+| Check | Actual result |
+| --- | --- |
+| Home, About Me, Projects, Skills, Contact | Pass: all five returned HTTP 200 and matched local files. |
+| Shared CSS and JavaScript | Pass: both returned HTTP 200 and matched local files. |
+| All seven project photos | Pass: all returned HTTP 200 and matched local files. |
+| Local navigation and fragment targets | Pass: every local destination exists and each fragment points to an existing ID. |
+| Page structure | Pass: each page has one h1, unique IDs, the same five navigation destinations, and one current-page indicator. |
+| Image sizes | Pass: every photo is below 500,000 bytes. |
+
+These checks verify publication and source structure. They do not establish
+browser interaction, visual layout, keyboard behavior, rendered image appearance,
+console behavior, external LinkedIn availability, or Lighthouse scores. T1–T29
+remain Not run until their browser steps are executed. No browser automation tool
+or Lighthouse runner is available in this session.
