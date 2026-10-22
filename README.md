@@ -1,6 +1,6 @@
 # Louvansky Benjamin's portfolio
 
-A personal portfolio built with plain HTML, CSS, and JavaScript. The Home, About Me, Projects, and Skills pages
+A personal portfolio built with plain HTML, CSS, and JavaScript. The Home, About Me, Projects, Skills, and Contact pages
 introduce my studies at NJIT, my work at American Electrical Technologies INC,
 my practical skills, and my interests.
 It includes responsive navigation, a dark mode toggle, and my LinkedIn profile.
@@ -13,11 +13,15 @@ build step is required.
 ## Deployment
 
 The intended GitHub Pages address is https://louvansky.github.io/portfolio/.
-Publication has not yet been verified. Projects include a disconnect relocation
+Publication has not yet been verified. Projects include a disconnect relocation,
 electrical panel work with a dedicated AC circuit, and an outdoor lighting switch
-installation. All three projects include photos. A separate Contact page remains
-to be added. The Connect navigation
-link currently points to the contact section on Home.
+installation. All three projects include photos. Every page links to all five
+pages. Contact is available through LinkedIn.
+
+## Testing
+
+See [TESTING.md](TESTING.md) for the live-site test plan and verification status.
+Browser, keyboard, responsive layout, and Lighthouse checks remain to be run.
 
 ## Assets
 
