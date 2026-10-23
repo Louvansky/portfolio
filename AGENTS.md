@@ -31,6 +31,9 @@ project cards, and consistent layouts. These are starting design choices; update
 this file when the owner approves a different direction.
 
 - Background: light gray `#F8FAFC`.
+- Layer soft blue, teal, and violet gradients with a subtle 48px grid over the
+  background. Use muted navy, teal, and violet versions in dark mode. Keep the
+  decoration static and behind content, with no additional image assets.
 - Surfaces: white `#FFFFFF`.
 - Main text: dark navy `#0F172A`.
 - Secondary text: slate `#475569`.
