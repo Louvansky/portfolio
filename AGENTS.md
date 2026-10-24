@@ -30,14 +30,16 @@ Use a clean, professional style with generous spacing, readable text, simple
 project cards, and consistent layouts. These are starting design choices; update
 this file when the owner approves a different direction.
 
-- Background: light gray `#F8FAFC`.
-- Layer soft blue, teal, and violet gradients with a subtle 48px grid over the
-  background. Use muted navy, teal, and violet versions in dark mode. Keep the
-  decoration static and behind content, with no additional image assets.
+- Background: warm off-white `#F7F5EF` with soft amber and steel-toned gradients
+  and a subtle 48px drafting grid. Use navy and warm charcoal shades in dark mode.
+- Electrical details: static conduit-style bends and junction dots behind hero
+  content, a decorative lightning bolt beside the initials, and amber trim.
+  Use CSS only, with no additional image assets or motion.
 - Surfaces: white `#FFFFFF`.
-- Main text: dark navy `#0F172A`.
-- Secondary text: slate `#475569`.
-- Accent: blue `#1D4ED8`, with white text on filled buttons.
+- Main text: dark navy `#0F172A`; secondary text: slate `#475569`.
+- Accent: copper `#92400E` in light mode and amber `#FBBF24` in dark mode.
+  Filled buttons use amber with dark navy text in both themes.
+- Eyebrows use a local monospace font for an electrical drawing feel.
 - Font: a local system stack such as `system-ui, -apple-system, BlinkMacSystemFont,
   "Segoe UI", sans-serif`; no external font dependency.
 - Use visibly underlined text links and clear keyboard focus indicators. Check

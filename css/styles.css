@@ -1,15 +1,17 @@
 :root {
   color-scheme: light;
-  --background: #f8fafc;
+  --background: #f7f5ef;
   --surface: #ffffff;
   --text: #0f172a;
   --muted: #475569;
-  --accent: #1d4ed8;
+  --accent: #92400e;
   --line: #cbd5e1;
-  --glow-blue: #bfdbfe;
-  --glow-teal: #ccfbf1;
-  --glow-violet: #ede9fe;
-  --grid: rgb(29 78 216 / 0.035);
+  --glow-blue: #fde7b0;
+  --glow-teal: #e2e8e7;
+  --glow-violet: #f3dfcd;
+  --grid: rgb(71 85 105 / 0.055);
+  --conduit: rgb(146 64 14 / 0.14);
+  --signal: #fbbf24;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
@@ -17,12 +19,13 @@
   --surface: #172338;
   --text: #f8fafc;
   --muted: #cbd5e1;
-  --accent: #93c5fd;
+  --accent: #fbbf24;
   --line: #475569;
-  --glow-blue: #172d50;
-  --glow-teal: #103333;
-  --glow-violet: #282044;
-  --grid: rgb(147 197 253 / 0.035);
+  --glow-blue: #3b2d17;
+  --glow-teal: #172c30;
+  --glow-violet: #30231e;
+  --grid: rgb(203 213 225 / 0.045);
+  --conduit: rgb(251 191 36 / 0.16);
 }
 * { box-sizing: border-box; }
 body {
@@ -49,18 +52,58 @@ button { font: inherit; cursor: pointer; }
 .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
 .skip-link { position: absolute; left: 20px; top: -100px; padding: 12px; background: var(--surface); z-index: 2; }
 .skip-link:focus { top: 12px; }
-.site-header { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.site-header { border-top: 4px solid var(--signal); display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding-block: 22px; border-bottom: 1px solid var(--line); }
 .brand { color: var(--text); font-size: 1.7rem; font-weight: 800; text-decoration: none; margin-right: auto; }
 .brand span { color: var(--accent); }
+.brand::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 27px;
+  margin-right: 9px;
+  vertical-align: -3px;
+  background: var(--signal);
+  clip-path: polygon(45% 0, 100% 0, 65% 38%, 95% 38%, 18% 100%, 38% 55%, 0 55%);
+}
 nav { display: flex; flex-wrap: wrap; gap: 20px; }
 nav a { color: var(--text); font-size: 0.9rem; }
 .menu-toggle, .theme-toggle { background: var(--surface); color: var(--text); border: 1px solid var(--line); padding: 8px 12px; border-radius: 6px; }
-.hero { padding-block: 70px; max-width: 950px; }
-.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; }
+.hero { position: relative; isolation: isolate; padding-block: 70px; max-width: 950px; }
+/* Decorative conduit bends and junctions stay behind the page content. */
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  top: 36px;
+  right: 0;
+  width: 32%;
+  height: calc(100% - 72px);
+  border: 2px solid var(--conduit);
+  border-left: 0;
+  border-radius: 0 28px 28px 0;
+  background:
+    radial-gradient(circle at 100% 22%, var(--signal) 0 4px, transparent 5px),
+    radial-gradient(circle at 35% 100%, var(--signal) 0 4px, transparent 5px);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  top: 56px;
+  right: 20px;
+  width: 23%;
+  height: calc(100% - 112px);
+  border: 2px solid var(--conduit);
+  border-left: 0;
+  border-radius: 0 20px 20px 0;
+}
+.eyebrow { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; color: var(--accent); text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; }
 h1 { font-size: clamp(2.6rem, 7vw, 5.3rem); line-height: 1.08; letter-spacing: -0.055em; margin-block: 24px; overflow-wrap: anywhere; }
 h1 span { color: var(--accent); }
 .intro { max-width: 670px; font-size: 1.15rem; color: var(--muted); margin-bottom: 30px; }
-.button { display: inline-flex; gap: 24px; padding: 13px 22px; background: #1d4ed8; color: #fff; border-radius: 6px; font-weight: 600; }
+.button { display: inline-flex; gap: 24px; padding: 13px 22px; background: #fbbf24; color: #0f172a; border: 1px solid #b45309; border-radius: 4px; font-weight: 600; }
 .hero-note { margin-top: 28px; font-size: 0.85rem; color: var(--muted); }
 .details { display: grid; border-top: 1px solid var(--line); }
 .details section { padding-block: 36px; }
