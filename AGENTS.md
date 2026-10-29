@@ -26,7 +26,7 @@ not publish a phone number, home address, or other private information.
 
 ## Design direction
 
-Use a clean, professional style with generous spacing, readable text, simple
+Use a clean, professional style with compact, comfortable spacing, readable text, simple
 project cards, and consistent layouts. These are starting design choices; update
 this file when the owner approves a different direction.
 
