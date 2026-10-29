@@ -32,6 +32,9 @@ this file when the owner approves a different direction.
 
 - Background: warm off-white `#F7F5EF` with soft amber and steel-toned gradients
   and a subtle 48px drafting grid. Use navy and warm charcoal shades in dark mode.
+- Background wiring: paired copper and teal wire runs along both page edges,
+  with repeated branches and circular terminal points. Keep them decorative,
+  behind the content, and scaled to fit phone screens.
 - Electrical details: static conduit-style bends and junction dots behind hero
   content, a decorative lightning bolt beside the initials, and amber trim.
   Use CSS only, with no additional image assets or motion.
