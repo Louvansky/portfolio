@@ -171,3 +171,47 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.035em; line-height:
 @media (min-width: 700px) {
   .project-gallery { grid-template-columns: 1fr 1fr; }
 }
+
+/* CSS-only electrical symbols: decorative, silent, and outside the tab order. */
+.electrical-symbols {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+.symbol { position: absolute; color: var(--accent); opacity: 0.13; }
+.bolt {
+  width: clamp(26px, 5vw, 62px);
+  height: clamp(46px, 8vw, 100px);
+  background: currentColor;
+  clip-path: polygon(45% 0, 100% 0, 63% 39%, 94% 39%, 15% 100%, 36% 56%, 0 56%);
+}
+.bulb { width: clamp(32px, 5vw, 60px); height: clamp(48px, 7vw, 84px); }
+.bulb::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 28%;
+  border: 3px solid currentColor;
+  border-radius: 50% 50% 40% 40%;
+}
+.bulb::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 12%;
+  left: 30%;
+  bottom: 13%;
+  border-block: 3px solid currentColor;
+  box-shadow: 0 7px 0 -2px currentColor;
+}
+.symbol:nth-child(1) { left: 4%; top: 9%; transform: rotate(-18deg); }
+.symbol:nth-child(2) { right: 6%; top: 6%; transform: rotate(16deg); }
+.symbol:nth-child(3) { left: 20%; top: 28%; transform: rotate(-12deg); }
+.symbol:nth-child(4) { right: 18%; top: 35%; transform: rotate(20deg); }
+.symbol:nth-child(5) { left: 7%; top: 53%; transform: rotate(12deg); }
+.symbol:nth-child(6) { right: 4%; top: 57%; transform: rotate(-16deg); }
+.symbol:nth-child(7) { left: 28%; top: 74%; transform: rotate(18deg); }
+.symbol:nth-child(8) { right: 24%; top: 81%; transform: rotate(-15deg); }
+.symbol:nth-child(9) { left: 4%; top: 92%; transform: rotate(-10deg); }
+.symbol:nth-child(10) { right: 5%; top: 94%; transform: rotate(12deg); }

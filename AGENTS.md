@@ -35,6 +35,8 @@ this file when the owner approves a different direction.
 - Background wiring: paired copper and teal wire runs along both page edges,
   with repeated branches and circular terminal points. Keep them decorative,
   behind the content, and scaled to fit phone screens.
+- Scatter faint CSS lightning bolts and outlined light bulbs behind every page.
+  Hide their container from assistive technology and prevent pointer interaction.
 - Electrical details: static conduit-style bends and junction dots behind hero
   content, a decorative lightning bolt beside the initials, and amber trim.
   Use CSS only, with no additional image assets or motion.
