@@ -250,3 +250,42 @@ h2 { font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: -0.035em; line-height:
 @media (prefers-reduced-motion: reduce) {
   .motion-toggle { display: none; }
 }
+
+/* Link feedback uses the same amber highlight for mouse and keyboard users. */
+nav a { position: relative; border-radius: 4px; }
+nav a::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -5px;
+  height: 2px;
+  background: var(--signal);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+nav a[aria-current="page"]::after { transform: scaleX(1); }
+a:not(.button):not(.brand):not(.skip-link):not(.project-gallery a):is(:hover, :focus-visible) {
+  color: var(--accent);
+  background-color: rgb(251 191 36 / 0.14);
+  text-underline-offset: 0.4em;
+}
+nav a:is(:hover, :focus-visible)::after { transform: scaleX(1); }
+.button:is(:hover, :focus-visible) {
+  background: #fcd34d;
+  box-shadow: 0 6px 20px rgb(180 83 9 / 0.25);
+}
+.brand:is(:hover, :focus-visible) { color: var(--accent); }
+button:is(:hover, :focus-visible) { border-color: var(--accent); background: var(--background); }
+@media (prefers-reduced-motion: no-preference) {
+  a, button { transition: color 220ms ease, background-color 220ms ease, box-shadow 220ms ease, translate 220ms ease, text-underline-offset 220ms ease, border-color 220ms ease; }
+  nav a::after { transition: transform 250ms ease; }
+  .button span { display: inline-block; transition: translate 220ms ease; }
+  nav a:is(:hover, :focus-visible),
+  .button:is(:hover, :focus-visible),
+  .brand:is(:hover, :focus-visible),
+  button:is(:hover, :focus-visible) { translate: 0 -2px; }
+  .button:is(:hover, :focus-visible) span { translate: 3px -2px; }
+}
+:root.motion-paused a,
+:root.motion-paused button,
+:root.motion-paused nav a::after,
+:root.motion-paused .button span { transition: none; translate: none; }

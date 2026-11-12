@@ -81,3 +81,9 @@ or Lighthouse runner is available in this session.
 | T31 | Background animation and pause | On each page in both themes, observe symbols and wires; activate Pause animations with mouse and keyboard, then Resume animations. | Slow drift and glow stop and resume; button text and aria-pressed match the state. | Not run |
 | T32 | Reduced motion | Enable the device/browser reduced-motion preference and reload all five pages. Hover/focus photo links. | No entrance, drift, glow, or zoom animation; content and links remain available. | Not run |
 | T33 | Animation layout | View all five pages at 390 × 844 and 1440 × 900 while animations run. | No new horizontal scrolling, obscured controls, or unreadable text. | Not run |
+
+## Link transition check
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T34 | Link and control feedback | On every page in both themes, hover and keyboard-focus each navigation link, text link, brand link, button, and photo link. Follow each link. Repeat with Pause animations and reduced motion enabled. | Highlight and focus feedback remain visible; navigation underline expands, buttons lift gently, and links open normally. Paused/reduced motion removes movement and transitions. No layout shift or overflow. | Not run |

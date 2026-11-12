@@ -41,7 +41,9 @@ this file when the owner approves a different direction.
   content, a decorative lightning bolt beside the initials, and amber trim.
   Use CSS only, with no additional image assets. Allow gentle drifting symbols,
   glowing wires, and photo entrance/hover/focus effects. Respect reduced-motion
-  preferences and provide a keyboard-accessible Pause animations button.
+  preferences and provide a keyboard-accessible Pause animations button. Add
+  smooth hover/focus highlights, navigation underlines, and small link/button
+  lifts; disable their movement when reduced motion or Pause animations is on.
 - Surfaces: white `#FFFFFF`.
 - Main text: dark navy `#0F172A`; secondary text: slate `#475569`.
 - Accent: copper `#92400E` in light mode and amber `#FBBF24` in dark mode.
