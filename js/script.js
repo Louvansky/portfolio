@@ -45,3 +45,11 @@ themeButton.addEventListener('click', () => {
     // Theme switching still works when the browser blocks local storage.
   }
 });
+
+const motionButton = document.querySelector('.motion-toggle');
+motionButton.hidden = false;
+motionButton.addEventListener('click', () => {
+  const paused = document.documentElement.classList.toggle('motion-paused');
+  motionButton.setAttribute('aria-pressed', String(paused));
+  motionButton.textContent = paused ? 'Resume animations' : 'Pause animations';
+});

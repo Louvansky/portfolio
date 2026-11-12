@@ -39,7 +39,9 @@ this file when the owner approves a different direction.
   Hide their container from assistive technology and prevent pointer interaction.
 - Electrical details: static conduit-style bends and junction dots behind hero
   content, a decorative lightning bolt beside the initials, and amber trim.
-  Use CSS only, with no additional image assets or motion.
+  Use CSS only, with no additional image assets. Allow gentle drifting symbols,
+  glowing wires, and photo entrance/hover/focus effects. Respect reduced-motion
+  preferences and provide a keyboard-accessible Pause animations button.
 - Surfaces: white `#FFFFFF`.
 - Main text: dark navy `#0F172A`; secondary text: slate `#475569`.
 - Accent: copper `#92400E` in light mode and amber `#FBBF24` in dark mode.

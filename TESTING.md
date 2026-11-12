@@ -72,3 +72,12 @@ browser interaction, visual layout, keyboard behavior, rendered image appearance
 console behavior, external LinkedIn availability, or Lighthouse scores. T1–T29
 remain Not run until their browser steps are executed. No browser automation tool
 or Lighthouse runner is available in this session.
+
+## Animation checks added November 12, 2026
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T30 | Photo animation | On Projects, load the page and hover or keyboard-focus each of the seven photo links. Open each link. | Photos enter gently, lift on hover/focus, and still open normally. | Not run |
+| T31 | Background animation and pause | On each page in both themes, observe symbols and wires; activate Pause animations with mouse and keyboard, then Resume animations. | Slow drift and glow stop and resume; button text and aria-pressed match the state. | Not run |
+| T32 | Reduced motion | Enable the device/browser reduced-motion preference and reload all five pages. Hover/focus photo links. | No entrance, drift, glow, or zoom animation; content and links remain available. | Not run |
+| T33 | Animation layout | View all five pages at 390 × 844 and 1440 × 900 while animations run. | No new horizontal scrolling, obscured controls, or unreadable text. | Not run |
