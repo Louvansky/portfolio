@@ -114,3 +114,32 @@ This record supplements prior results. Full live-site T1–T34, Lighthouse, full
 keyboard traversal, reduced-motion behavior, and console auditing remain pending.
 Earlier notes about browser tooling being unavailable describe those earlier
 sessions; this session used the installed Chrome without installing packages.
+
+## Photo viewer test cases
+
+The photo-viewer behavior supersedes the older expectation that a normal photo
+click navigates directly to an image. Without JavaScript, image links still work.
+
+| ID | Testing | Steps | Expected result | Actual result |
+| --- | --- | --- | --- | --- |
+| T35 | Photo descriptions | On Home and Projects, open each photo using click and Enter at phone/laptop sizes in both themes. | Large photo, matching title, and a unique factual description appear inside a dialog. | Not run on live site |
+| T36 | Photo browsing | On Projects, use Previous/Next and left/right arrow keys, including at the first and last photo. | Viewer cycles through all seven photos with correct titles, descriptions, and count. | Not run on live site |
+| T37 | Viewer close and focus | Open each photo; close with Close, Escape, and a click outside the dialog. Tab within the open viewer. | Focus stays inside the open dialog, closing restores focus to the original photo link, background scrolling resumes. | Not run on live site |
+| T38 | Photo fallback | Disable JavaScript; open each photo. Re-enable it and use a modified click on a photo. | Original JPEG opens normally through the relative image link. | Not run |
+
+### Local photo-viewer verification — November 12, 2026
+
+Chrome 156.0.0.0, local file URLs, 390 × 1000 and 1440 × 1000:
+
+- Pass: all eight photo entry points opened the dialog with the matching title
+  and a nonempty project description; viewer width fit both viewports.
+- Pass: Next cycled to the expected photo, including wrapping at the end.
+- Pass: Escape closed every dialog and focus returned to the opening photo link.
+- Pass: all five pages still fit both viewports in light/dark themes; local images
+  loaded, and existing menu, pause/resume, and initial skip-link checks passed.
+- Pending: live-site execution, full dialog Tab traversal, Previous/arrow-key
+  navigation, backdrop click, modified-click fallback, and visual modal review.
+
+The page-image check initially included the dialog's intentionally empty image
+placeholder. The check was corrected to inspect only images with a source; it
+then passed. No unloaded page photo was concealed or removed to pass the check.

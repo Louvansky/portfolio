@@ -108,6 +108,13 @@ local checks. Record the URL, date, browser, and viewport used. Preserve failed
 results and add retest results after fixes. Clearly state any checks that could
 not be performed; never report unexecuted checks as passing.
 
+## Photo viewer
+
+Project photos and the featured Home photo open in a native dialog showing the
+full image, a descriptive title, and factual project context. Support Close, Escape,
+focus restoration, and Previous/Next controls on Projects. Preserve image links
+as a fallback without JavaScript and allow modified clicks to open the image.
+
 ## Git and deployment
 
 - Review the diff after each completed task, verify the change, and make a small

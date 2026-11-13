@@ -6,7 +6,9 @@ my practical skills, and my interests.
 The design takes inspiration from an electrical control panel: amber indicators,
 numbered project circuits, equipment-style frames, and a featured field photo.
 It includes responsive navigation, light/dark themes, optional animation with a
-pause control, and my LinkedIn profile. New visitors start in the dark theme;
+pause control, an accessible photo viewer with project descriptions, and my
+LinkedIn profile. Click any project photo to see its details; use Previous/Next
+or the arrow keys to browse, and Close or Escape to return. New visitors start in the dark theme;
 saved preferences are preserved.
 
 ## View locally
