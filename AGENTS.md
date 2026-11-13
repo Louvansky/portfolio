@@ -26,35 +26,25 @@ not publish a phone number, home address, or other private information.
 
 ## Design direction
 
-Use a clean, professional style with compact, comfortable spacing, readable text, simple
-project cards, and consistent layouts. These are starting design choices; update
-this file when the owner approves a different direction.
+Use an electrical control-panel identity with compact spacing, oversized bold
+headings, numbered project circuits, equipment labels, and real project photography.
 
-- Background: warm off-white `#F7F5EF` with soft amber and steel-toned gradients
-  and a subtle 48px drafting grid. Use navy and warm charcoal shades in dark mode.
-- Background wiring: paired copper and teal wire runs along both page edges,
-  with repeated branches and circular terminal points. Keep them decorative,
-  behind the content, and scaled to fit phone screens.
-- Scatter faint CSS lightning bolts and outlined light bulbs behind every page.
-  Hide their container from assistive technology and prevent pointer interaction.
-- Electrical details: static conduit-style bends and junction dots behind hero
-  content, a decorative lightning bolt beside the initials, and amber trim.
-  Use CSS only, with no additional image assets. Allow gentle drifting symbols,
-  glowing wires, and photo entrance/hover/focus effects. Respect reduced-motion
-  preferences and provide a keyboard-accessible Pause animations button. Add
-  smooth hover/focus highlights, navigation underlines, and small link/button
-  lifts; disable their movement when reduced motion or Pause animations is on.
-- Surfaces: white `#FFFFFF`.
-- Main text: dark navy `#0F172A`; secondary text: slate `#475569`.
-- Accent: copper `#92400E` in light mode and amber `#FBBF24` in dark mode.
-  Filled buttons use amber with dark navy text in both themes.
-- Eyebrows use a local monospace font for an electrical drawing feel.
-- Font: a local system stack such as `system-ui, -apple-system, BlinkMacSystemFont,
-  "Segoe UI", sans-serif`; no external font dependency.
-- Use visibly underlined text links and clear keyboard focus indicators. Check
-  contrast for each actual text/background pairing.
-- Start with a phone layout, then expand using CSS media queries. Keep content
-  comfortably readable on laptops and avoid horizontal scrolling.
+- Default theme: charcoal `#131716` with warm white text `#F3F1E9`, muted sage
+  `#B6BDB5`, amber `#FFC54A`, and steel-green panel surfaces.
+- Light theme: drafting-paper `#F0EEE4`, dark green text `#19221B`, and copper
+  `#855000` accents. Preserve the visitor’s saved theme choice.
+- Use a subtle 32px drawing grid, edge conduit, scattered CSS bolts and bulbs,
+  terminal-like status dots, and thin panel borders. Keep decoration behind content.
+- Home leads with “Wired for what’s next,” the owner’s name and real background,
+  a framed project photo, and a circuit directory linking to the three projects.
+- Keep all five navigation destinations clear. The logo uses a lightning mark
+  and initials with a small nameplate; page introductions use numbered labels.
+- Use local system fonts for body/headings and a local monospace stack for labels.
+  No external font or image dependencies; reuse the owner’s project photos.
+- Amber buttons use dark text. Keep links identifiable and keyboard focus visible.
+- Gentle drifting, glow, photo and link transitions are allowed. Respect reduced
+  motion and the Pause animations control, including hover and focus transitions.
+- Start with a phone layout and expand using media queries; avoid horizontal scroll.
 
 ## Implementation rules
 

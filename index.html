@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/script.js" defer></script>
 </head>
-<body>
+<body class="home">
   <div class="electrical-symbols" aria-hidden="true">
     <span class="symbol bolt"></span><span class="symbol bulb"></span>
     <span class="symbol bulb"></span><span class="symbol bolt"></span>
@@ -18,7 +18,7 @@
   </div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
-    <a class="brand" href="index.html" aria-label="Louvansky Benjamin home">LB<span aria-hidden="true">.</span></a>
+    <a class="brand" href="index.html" aria-label="Louvansky Benjamin home"><span class="brand-mark" aria-hidden="true">ϟ</span><span>LB<span class="brand-sub">BENJAMIN / PORTFOLIO</span></span></a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" hidden>Menu</button>
     <nav id="navigation" aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
@@ -31,12 +31,26 @@
     <button class="theme-toggle" type="button" aria-pressed="false" hidden>Dark mode</button>
   </header>
   <main id="main" class="wrap">
-    <section class="hero" aria-labelledby="intro-title">
-      <p class="eyebrow">Student. Assistant Electrician.</p>
-      <h1 id="intro-title">Hi, I’m<br><span>Louvansky Benjamin.</span></h1>
-      <p class="intro">I’m an SDET major at New Jersey Institute of Technology with a minor in Business. Alongside my studies, I work as an Assistant Electrician at my father’s company, American Electrical Technologies INC.</p>
-      <a class="button" href="https://www.linkedin.com/in/louvansky-benjamin-083455307/">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
-      <p class="hero-note">Technology · Business · Electrical work</p>
+    <section class="home-hero" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Louvansky Benjamin / NJIT</p>
+        <h1 id="intro-title">WIRED FOR<br><span>WHAT’S</span><br><span class="outline-word">NEXT.</span></h1>
+        <p class="hero-role">SDET student. Assistant Electrician.<br>A future in Electrical Engineering.</p>
+        <p class="intro">I’m studying SDET at NJIT with a Business minor and working alongside my father at American Electrical Technologies INC. From wires in the wall to ideas in code, I enjoy figuring out how things work.</p>
+        <div class="hero-actions"><a class="button" href="projects.html">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="about.html">Meet the person behind it →</a></div>
+      </div>
+      <figure class="field-panel">
+        <div class="panel-label"><span class="status-dot" aria-hidden="true"></span> FIELD NOTES <span>PROJECT / 02</span></div>
+        <a class="field-photo" href="projects.html#panel-title"><img src="images/panel-upgrade-02.jpg" width="1050" height="1400" alt="Open apartment electrical panel showing the breakers and wiring from the dedicated AC circuit project."></a>
+        <figcaption><span class="eyebrow">Behind the panel</span><strong>Real wires.<br>Real problem-solving.</strong><a href="projects.html#panel-title">Panel upgrade &amp; AC circuit <span aria-hidden="true">↗</span></a></figcaption>
+        <span class="panel-screw screw-top" aria-hidden="true"></span><span class="panel-screw screw-bottom" aria-hidden="true"></span>
+      </figure>
+    </section>
+    <section class="project-directory" aria-labelledby="directory-title">
+      <div class="section-heading"><p class="eyebrow">The circuit directory</p><h2 id="directory-title">Three projects. Hands-on experience.</h2></div>
+      <a class="circuit-link" href="projects.html#disconnect-title"><span class="circuit-number">01</span><span><strong>Disconnect relocation</strong><small>Access / conduit / outdoor wiring</small></span><span class="circuit-arrow" aria-hidden="true">↗</span></a>
+      <a class="circuit-link" href="projects.html#panel-title"><span class="circuit-number">02</span><span><strong>Panel &amp; dedicated AC circuit</strong><small>Troubleshooting / load distribution</small></span><span class="circuit-arrow" aria-hidden="true">↗</span></a>
+      <a class="circuit-link" href="projects.html#lighting-title"><span class="circuit-number">03</span><span><strong>Outdoor lighting switch</strong><small>Concealed wiring / installation</small></span><span class="circuit-arrow" aria-hidden="true">↗</span></a>
     </section>
     <div class="details">
       <section id="education" aria-labelledby="education-title">
@@ -59,6 +73,6 @@
       <a href="https://www.linkedin.com/in/louvansky-benjamin-083455307/">Louvansky Benjamin on LinkedIn <span aria-hidden="true">↗</span></a>
     </section>
   </main>
-  <footer class="wrap site-footer"><p>Louvansky Benjamin</p><a href="#main">Back to top ↑</a></footer>
+  <footer class="wrap site-footer"><p><span class="status-dot" aria-hidden="true"></span> Louvansky Benjamin <span class="footer-note"> / Electrical work &amp; technology</span></p><a href="#main">Back to top ↑</a></footer>
 </body>
 </html>

@@ -32,9 +32,9 @@ function setTheme(theme) {
 }
 themeButton.hidden = false;
 try {
-  setTheme(localStorage.getItem('theme') === 'dark' ? 'dark' : 'light');
+  setTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
 } catch {
-  setTheme('light');
+  setTheme('dark');
 }
 themeButton.addEventListener('click', () => {
   const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';

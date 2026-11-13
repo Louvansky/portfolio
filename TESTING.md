@@ -87,3 +87,30 @@ or Lighthouse runner is available in this session.
 | ID | Testing | Steps | Expected result | Actual result |
 | --- | --- | --- | --- | --- |
 | T34 | Link and control feedback | On every page in both themes, hover and keyboard-focus each navigation link, text link, brand link, button, and photo link. Follow each link. Repeat with Pause animations and reduced motion enabled. | Highlight and focus feedback remain visible; navigation underline expands, buttons lift gently, and links open normally. Paused/reduced motion removes movement and transitions. No layout shift or overflow. | Not run |
+
+## Control-panel redesign verification — November 12, 2026
+
+Environment: local `file://` pages in Headless Chrome 156.0.0.0 on macOS.
+Viewports: 390 × 1000 and 1440 × 1000. Both dark and light themes were checked
+on all five pages using Chrome's device-metrics override (20 combinations).
+
+| Check | Actual result |
+| --- | --- |
+| Page width | Pass: document width stayed within the viewport in all 20 combinations. |
+| Photo loading | Pass: all photos decoded successfully after loading offscreen images. |
+| Mobile menu | Pass: direct button activation opened the menu; keyboard Escape closed it and returned focus to Menu on all five pages. Full Tab/Enter traversal remains pending. |
+| Animation control | Pass: Pause and Resume updated the paused state on all five pages at both sizes. |
+| Skip-link focus | Pass: first Tab reached the skip link on all five pages at both sizes. |
+| Home appearance | Pass: reviewed phone and desktop screenshots in both themes; heading, photo panel, and controls fit. |
+| Source structure | Pass: five-page navigation, one h1 per page, unique IDs, valid local/fragment links, image descriptions, and image sizes below 500 KB. |
+
+An initial 390px screenshot was clipped because Chrome's command-line window had
+an actual 500px layout viewport. Device-metrics override confirmed a true 390px
+layout fits without overflow. An initial photo check encountered offscreen lazy
+images; rerunning after explicitly loading them passed. These are test-harness
+corrections, not evidence that interactive browser cases were fully executed.
+
+This record supplements prior results. Full live-site T1–T34, Lighthouse, full
+keyboard traversal, reduced-motion behavior, and console auditing remain pending.
+Earlier notes about browser tooling being unavailable describe those earlier
+sessions; this session used the installed Chrome without installing packages.

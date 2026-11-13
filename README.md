@@ -3,7 +3,11 @@
 A personal portfolio built with plain HTML, CSS, and JavaScript. The Home, About Me, Projects, Skills, and Contact pages
 introduce my studies at NJIT, my work at American Electrical Technologies INC,
 my practical skills, and my interests.
-It includes responsive navigation, a dark mode toggle, and my LinkedIn profile.
+The design takes inspiration from an electrical control panel: amber indicators,
+numbered project circuits, equipment-style frames, and a featured field photo.
+It includes responsive navigation, light/dark themes, optional animation with a
+pause control, and my LinkedIn profile. New visitors start in the dark theme;
+saved preferences are preserved.
 
 ## View locally
 
